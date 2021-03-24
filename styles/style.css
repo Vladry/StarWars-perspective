@@ -1,0 +1,63 @@
+body {background-color: #312a3a}
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #4b240b;
+    background-image: radial-gradient(#741311 0%, rgba(0, 0, 148, 0.73) 60%, #003a00 100%);
+    overflow: hidden;
+    height: 100vh;
+    transform: perspective(300px) rotateX(20deg);
+}
+
+.text-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, #624e1b 0% , #312a3a 50%, #1d4341 100% );
+    color: white;
+    background-size: contain;
+    height: 800px;
+    animation: unfold 40s linear forwards, move-it 40s linear 1;
+}
+.text-container:first-child {
+    padding-top: 20%;
+}
+.text-container:last-child {
+padding-bottom: 20%;
+}
+
+.content {
+    color: inherit;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+@keyframes unfold {
+    0% {
+        width: 30%
+    }
+    10%, 30% {
+        width: 60%
+    }
+    40% {
+        width: 40%
+    }
+}
+@keyframes move-it {
+    0% {
+        transform: translateY(70%);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0
+    }
+100% {
+    transform: translateY(-150%);
+}
+}
